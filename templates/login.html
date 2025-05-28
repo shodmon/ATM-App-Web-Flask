@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khan Online Banking - Login</title>
+</head>
+<body>
+    <h1>Welcome to Khan Online Banking</h1>
+    <p>Please login to use the ATM</p>
+
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
+    <form action="/login" method="post">
+        <label>Username:</label><br>
+        <input type="text" name="username" required><br><br>
+        
+        <label>Password:</label><br>
+        <input type="password" name="password" required><br><br>
+        
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
