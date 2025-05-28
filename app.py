@@ -32,10 +32,6 @@ def login():
 def main_menu():
     if "username" not in session:
         return redirect("/")
-    return render_template("main_menu.html")
-
-if __name__ == "__main__":
-    app.run(debug=True)
 
 import os
 
